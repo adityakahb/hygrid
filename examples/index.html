@@ -13,11 +13,10 @@
 
     <title>Hygrid</title>
     <style>
-      .grid-example{
+      .grid-example, .grid-example-2{
         margin: 10px 0;
       }
         div[class^='hygrid']{
-            border: 1px solid #888;
             background:
                 radial-gradient(black 15%, transparent 16%) 0 0,
                 radial-gradient(black 15%, transparent 16%) 8px 8px,
@@ -28,21 +27,33 @@
         }
         .hcol-item{
             background: #888;
+            -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.4);
+            -moz-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.4);
+            box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.4);
         }
         .hcol-item:nth-child(2n+1) {
             background: #aaa;
         }
         .item-data{
             height: 50px;
+            -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.4);
+            -moz-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.4);
+            box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.4);
         }
-        .hcol-item .item-data{
+        .hcol-item .hcol-item:nth-child(even) .item-data, .hcol-item:nth-child(even) .item-data{
             background: #abcdef;
         }
-        .hcol-item:nth-child(2n+1) .item-data{
+        .hcol-item .hcol-item:nth-child(odd) .item-data, .hcol-item:nth-child(odd) .item-data{
             background: #fedcba;
         }
         hr{
             margin: 40px 0;
+        }
+        .grid-example-2 div[class^='hygrid']{
+            background: transparent;
+            -webkit-box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.75);
         }
     </style>
 </head>
@@ -211,6 +222,51 @@
             <div class="hcol-item hcol-xs-1"><div class="item-data">10</div></div>
             <div class="hcol-item hcol-xs-1"><div class="item-data">11</div></div>
             <div class="hcol-item hcol-xs-1"><div class="item-data">12</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Nested Grids</h2>
+     <div class="grid-example-2">
+         <div class="hygrid-gutter">
+             <div class="hcol-item hcol-xs-12 hcol-sm-4">
+                 <div class="hygrid-gutter">
+                     <div class="hcol-item hcol-xs-4">
+                         <div class="item-data">1</div>
+                     </div>
+                     <div class="hcol-item hcol-xs-4">
+                         <div class="item-data">2</div>
+                     </div>
+                     <div class="hcol-item hcol-xs-4">
+                         <div class="item-data">3</div>
+                     </div>
+                 </div>
+            </div>
+            <div class="hcol-item hcol-xs-12 hcol-sm-8">
+                 <div class="hygrid">
+                     <div class="hcol-item hcol-xs-3">
+                        <div class="hygrid-gutter">
+                             <div class="hcol-item hcol-xs-4">
+                                 <div class="item-data">1</div>
+                             </div>
+                             <div class="hcol-item hcol-xs-4">
+                                 <div class="item-data">2</div>
+                             </div>
+                             <div class="hcol-item hcol-xs-4">
+                                 <div class="item-data">3</div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="hcol-item hcol-xs-3">
+                         <div class="item-data">2</div>
+                     </div>
+                     <div class="hcol-item hcol-xs-3">
+                         <div class="item-data">3</div>
+                     </div>
+                     <div class="hcol-item hcol-xs-3">
+                         <div class="item-data">3</div>
+                     </div>
+                 </div>
+            </div>
          </div>
      </div>
      <hr>

@@ -5,10 +5,13 @@
 .#{$hygrid-grid-prefix}-centered,
 .#{$hygrid-grid-prefix}-gutter,
 .#{$hygrid-grid-prefix}-centered-gutter {
-  margin: 0;
-  overflow: hidden;
-  @include hygrid_borderbox();
-  @include hygrid_clearfix();
+    margin: 0;
+    overflow: hidden;
+    @include hygrid_borderbox();
+    @include hygrid_clearfix();
+    & > .#{$hygrid-column-prefix}-item{
+        @include hygrid_borderbox();   
+    }
 }
 
 .#{$hygrid-grid-prefix},
@@ -21,33 +24,24 @@
   }
 }
 
-.#{$hygrid-grid-prefix}-centered > .#{$hygrid-column-prefix}-item,
-.#{$hygrid-grid-prefix}-centered-gutter > .#{$hygrid-column-prefix}-item {
-    float: none;
-    letter-spacing: normal;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.#{$hygrid-column-prefix}-item{
-  width: 100%;
-}
-
-.#{$hygrid-grid-prefix} > .#{$hygrid-column-prefix}-item,
-.#{$hygrid-grid-prefix}-centered > .#{$hygrid-column-prefix}-item,
-.#{$hygrid-grid-prefix}-gutter > .#{$hygrid-column-prefix}-item,
-.#{$hygrid-grid-prefix}-centered-gutter > .#{$hygrid-column-prefix}-item{
-  @include hygrid_borderbox();
-}
-
 .#{$hygrid-grid-prefix}-centered,
-.#{$hygrid-grid-prefix}-centered-gutter {
+.#{$hygrid-grid-prefix}-centered-gutter{
     text-align: center;
     //removes inline-block produced whitespace
     letter-spacing: -0.33em;
     // Keep this line. This makes sure letter-spacing
     // is consistant across all browsers.
     font-family: arial;
+    & > .#{$hygrid-column-prefix}-item{
+        float: none;
+        letter-spacing: normal;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.#{$hygrid-column-prefix}-item{
+  width: 100%;
 }
 
 @include createHygrid();
