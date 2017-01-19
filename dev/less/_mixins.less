@@ -18,6 +18,13 @@
     }
     .hcol-widths(@prefix, (@i + 1));
 }
+.hcol-offsets(@i: 1) when (@i =< (@hygrid-columns - 1)){
+    .@{hygrid-column-prefix}-offset-@{i} {
+        // width: hygridCalculate($i, $hygrid-columns);
+        margin-left: (@i  * 100% / @hygrid-columns);
+    }
+    .hcol-offsets((@i + 1));
+}
 .createHygrid(){
     .hcol-widths(xs, 1);
     .@{hygrid-grid-prefix}-gutter > .@{hygrid-column-prefix}-item,
@@ -50,3 +57,6 @@
         }
     }
 }
+.createHygridOffsets(){
+    .hcol-offsets(1);
+};

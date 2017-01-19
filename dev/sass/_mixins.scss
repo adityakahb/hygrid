@@ -11,14 +11,24 @@
     }
 }
 
-@function hygridCalculate($a, $b){
+@function hygridCalculateWidths($a, $b){
+  @return ($a/$b * 100) + %;
+}
+@function hygridCalculateOffset($a, $b){
   @return ($a/$b * 100) + %;
 }
 
 @mixin hcol-widths($prefix: ''){
     @for $i from 1 through $hygrid-columns {
         .#{$hygrid-column-prefix}-#{$prefix}-#{$i} {
-            width: hygridCalculate($i, $hygrid-columns);
+            width: hygridCalculateWidths($i, $hygrid-columns);
+        }
+    }
+}
+@mixin hcol-offsets(){
+    @for $i from 1 through ($hygrid-columns - 1) {
+        .#{$hygrid-column-prefix}-offset-#{$i} {
+            margin-left: hygridCalculateOffset($i, $hygrid-columns);
         }
     }
 }
@@ -53,4 +63,7 @@
             padding-right: $lg-gutter;
         }
     }
+}
+@mixin createHygridOffsets(){
+    @include hcol-offsets();
 }

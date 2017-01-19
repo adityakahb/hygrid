@@ -11,9 +11,14 @@
   .hygrid_clearfix();
 }
 
-.@{hygrid-grid-prefix} > .@{hygrid-column-prefix}-item,
-.@{hygrid-grid-prefix}-gutter > .@{hygrid-column-prefix}-item{
-  float: left;
+.@{hygrid-grid-prefix},
+.@{hygrid-grid-prefix}-gutter{
+  & > .@{hygrid-column-prefix}-item{
+    float: left;     
+  }
+  &.hgrid-rtl > .@{hygrid-column-prefix}-item{
+    float: right;     
+  }
 }
 
 .@{hygrid-grid-prefix}-centered > .@{hygrid-column-prefix}-item,
@@ -46,3 +51,7 @@
 }
 
 .createHygrid();
+.@{hygrid-grid-prefix},
+.@{hygrid-grid-prefix}-gutter{
+    .createHygridOffsets();
+}

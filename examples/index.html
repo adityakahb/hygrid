@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en_US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link href="../dist/hygrid.min.css" rel="stylesheet" />
+
+    <title>Hygrid</title>
+    <style>
+      .grid-example{
+        margin: 10px 0;
+      }
+        div[class^='hygrid']{
+            border: 1px solid #888;
+            background:
+                radial-gradient(black 15%, transparent 16%) 0 0,
+                radial-gradient(black 15%, transparent 16%) 8px 8px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+            background-color:#282828;
+            background-size:16px 16px;
+        }
+        .hcol-item{
+            background: #888;
+        }
+        .hcol-item:nth-child(2n+1) {
+            background: #aaa;
+        }
+        .item-data{
+            height: 50px;
+        }
+        .hcol-item .item-data{
+            background: #abcdef;
+        }
+        .hcol-item:nth-child(2n+1) .item-data{
+            background: #fedcba;
+        }
+        hr{
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+ <main>
+     <h1>Hygrid Examples</h1>
+     <hr>
+     <h2>Grid with no gutter</h2>
+     <div class="grid-example">
+         <div class="hygrid">
+            <div class="hcol-item hcol-xs-1"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">6</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">7</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">8</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">9</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">10</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">11</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">12</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Grid with gutter space</h2>
+     <div class="grid-example">
+         <div class="hygrid-gutter">
+            <div class="hcol-item hcol-xs-1"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">6</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">7</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">8</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">9</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">10</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">11</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">12</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Centered Grid with no gutter</h2>
+     <div class="grid-example">
+         <div class="hygrid-centered">
+            <div class="hcol-item hcol-xs-1"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">6</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Centered Grid with gutter space</h2>
+     <div class="grid-example">
+         <div class="hygrid-centered-gutter">
+            <div class="hcol-item hcol-xs-1"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">6</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Responsive Grid without gutter space</h2>
+     <div class="grid-example">
+         <div class="hygrid">
+            <div class="hcol-item hcol-xs-12 hcol-sm-4 hcol-lg-6"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-12 hcol-sm-4 hcol-lg-3"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-12 hcol-sm-4 hcol-lg-3"><div class="item-data">3</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Responsive Grid with gutter space</h2>
+     <div class="grid-example">
+         <div class="hygrid-gutter">
+            <div class="hcol-item hcol-xs-12 hcol-sm-4 hcol-lg-6"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-12 hcol-sm-4 hcol-lg-3"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-12 hcol-sm-4 hcol-lg-3"><div class="item-data">3</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Responsive Centered Grid without gutter space</h2>
+     <div class="grid-example">
+         <div class="hygrid-centered">
+            <div class="hcol-item hcol-xs-8 hcol-sm-4 hcol-lg-6"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-8 hcol-sm-4 hcol-lg-3"><div class="item-data">2</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Responsive Centered Grid with gutter space</h2>
+     <div class="grid-example">
+         <div class="hygrid-centered-gutter">
+            <div class="hcol-item hcol-xs-8 hcol-sm-4 hcol-lg-6"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-8 hcol-sm-4 hcol-lg-3"><div class="item-data">2</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Grid with offsets</h2>
+     <div class="grid-example">
+         <div class="hygrid">
+            <div class="hcol-item hcol-xs-1 hcol-offset-11"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-2 hcol-offset-10"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-3 hcol-offset-9"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-4 hcol-offset-8"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-5 hcol-offset-7"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-6 hcol-offset-6"><div class="item-data">6</div></div>
+            <div class="hcol-item hcol-xs-7 hcol-offset-5"><div class="item-data">7</div></div>
+            <div class="hcol-item hcol-xs-8 hcol-offset-4"><div class="item-data">8</div></div>
+            <div class="hcol-item hcol-xs-9 hcol-offset-3"><div class="item-data">9</div></div>
+            <div class="hcol-item hcol-xs-10 hcol-offset-2"><div class="item-data">10</div></div>
+            <div class="hcol-item hcol-xs-11 hcol-offset-1"><div class="item-data">11</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Grid with offsets and gutter</h2>
+     <div class="grid-example">
+         <div class="hygrid-gutter">
+            <div class="hcol-item hcol-xs-1 hcol-offset-11"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-2 hcol-offset-10"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-3 hcol-offset-9"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-4 hcol-offset-8"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-5 hcol-offset-7"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-6 hcol-offset-6"><div class="item-data">6</div></div>
+            <div class="hcol-item hcol-xs-7 hcol-offset-5"><div class="item-data">7</div></div>
+            <div class="hcol-item hcol-xs-8 hcol-offset-4"><div class="item-data">8</div></div>
+            <div class="hcol-item hcol-xs-9 hcol-offset-3"><div class="item-data">9</div></div>
+            <div class="hcol-item hcol-xs-10 hcol-offset-2"><div class="item-data">10</div></div>
+            <div class="hcol-item hcol-xs-11 hcol-offset-1"><div class="item-data">11</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Grid with no gutter Right to Left</h2>
+     <div class="grid-example">
+         <div class="hygrid hgrid-rtl">
+            <div class="hcol-item hcol-xs-1"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">6</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">7</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">8</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">9</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">10</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">11</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">12</div></div>
+         </div>
+     </div>
+     <hr>
+     <h2>Grid with gutter space Right to Left</h2>
+     <div class="grid-example">
+         <div class="hygrid-gutter hgrid-rtl">
+            <div class="hcol-item hcol-xs-1"><div class="item-data">1</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">2</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">3</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">4</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">5</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">6</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">7</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">8</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">9</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">10</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">11</div></div>
+            <div class="hcol-item hcol-xs-1"><div class="item-data">12</div></div>
+         </div>
+     </div>
+     <hr>
+ </main>
+</body>
+</html>

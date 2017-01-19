@@ -19,6 +19,10 @@
 .hygrid-gutter > .hcol-item {
   float: left; }
 
+.hygrid.hgrid-rtl > .hcol-item,
+.hygrid-gutter.hgrid-rtl > .hcol-item {
+  float: right; }
+
 .hygrid-centered > .hcol-item,
 .hygrid-centered-gutter > .hcol-item {
   float: none;
@@ -173,3 +177,47 @@
   .hygrid-centered-gutter > .hcol-item {
     padding-left: 20px;
     padding-right: 20px; } }
+
+.hygrid .hcol-offset-1,
+.hygrid-gutter .hcol-offset-1 {
+  margin-left: 8.3333333333%; }
+
+.hygrid .hcol-offset-2,
+.hygrid-gutter .hcol-offset-2 {
+  margin-left: 16.6666666667%; }
+
+.hygrid .hcol-offset-3,
+.hygrid-gutter .hcol-offset-3 {
+  margin-left: 25%; }
+
+.hygrid .hcol-offset-4,
+.hygrid-gutter .hcol-offset-4 {
+  margin-left: 33.3333333333%; }
+
+.hygrid .hcol-offset-5,
+.hygrid-gutter .hcol-offset-5 {
+  margin-left: 41.6666666667%; }
+
+.hygrid .hcol-offset-6,
+.hygrid-gutter .hcol-offset-6 {
+  margin-left: 50%; }
+
+.hygrid .hcol-offset-7,
+.hygrid-gutter .hcol-offset-7 {
+  margin-left: 58.3333333333%; }
+
+.hygrid .hcol-offset-8,
+.hygrid-gutter .hcol-offset-8 {
+  margin-left: 66.6666666667%; }
+
+.hygrid .hcol-offset-9,
+.hygrid-gutter .hcol-offset-9 {
+  margin-left: 75%; }
+
+.hygrid .hcol-offset-10,
+.hygrid-gutter .hcol-offset-10 {
+  margin-left: 83.3333333333%; }
+
+.hygrid .hcol-offset-11,
+.hygrid-gutter .hcol-offset-11 {
+  margin-left: 91.6666666667%; }
