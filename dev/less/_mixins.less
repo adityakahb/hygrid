@@ -1,0 +1,52 @@
+.hygrid_borderbox() {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.hygrid_clearfix() {
+    &:after{
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.hcol-widths(@prefix: '', @i: 1) when (@i =< @hygrid-columns){
+    .@{hygrid-column-prefix}-@{prefix}-@{i} {
+        // width: hygridCalculate($i, $hygrid-columns);
+        width: (@i  * 100% / @hygrid-columns);
+    }
+    .hcol-widths(@prefix, (@i + 1));
+}
+.createHygrid(){
+    .hcol-widths(xs, 1);
+    .@{hygrid-grid-prefix}-gutter > .@{hygrid-column-prefix}-item,
+    .@{hygrid-grid-prefix}-centered-gutter > .@{hygrid-column-prefix}-item{
+        padding-left: @xs-gutter;
+        padding-right: @xs-gutter;
+    }
+    @media (min-width: @sm-min) {
+        .hcol-widths(sm, 1);
+        .@{hygrid-grid-prefix}-gutter > .@{hygrid-column-prefix}-item,
+        .@{hygrid-grid-prefix}-centered-gutter > .@{hygrid-column-prefix}-item{
+            padding-left: @sm-gutter;
+            padding-right: @sm-gutter;
+        }
+    }
+    @media (min-width: @md-min) {
+        .hcol-widths(md, 1);
+        .@{hygrid-grid-prefix}-gutter > .@{hygrid-column-prefix}-item,
+        .@{hygrid-grid-prefix}-centered-gutter > .@{hygrid-column-prefix}-item{
+            padding-left: @md-gutter;
+            padding-right: @md-gutter;
+        }
+    }
+    @media (min-width: @lg-min) {
+        .hcol-widths(lg, 1);
+        .@{hygrid-grid-prefix}-gutter > .@{hygrid-column-prefix}-item,
+        .@{hygrid-grid-prefix}-centered-gutter > .@{hygrid-column-prefix}-item{
+            padding-left: @lg-gutter;
+            padding-right: @lg-gutter;
+        }
+    }
+}

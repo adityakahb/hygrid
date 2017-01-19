@@ -1,0 +1,32 @@
+{
+  "name": "hygrid",
+  "version": "1.0.0",
+  "description": "A simple grid generator",
+  "author": "Aditya Bhakay <http://www.adityabhakay.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adityakahb/hygrid.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "hygrid",
+    "grid",
+    "layout",
+    "css",
+    "sass",
+    "less",
+    "responsive"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-sass": "^1.1.0",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.1",
+    "time-grunt": "^1.3.0"
+  }
+}
